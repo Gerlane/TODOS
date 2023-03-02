@@ -1,0 +1,12 @@
+<div>
+    HELLO WORLD!
+</div>
+
+<div>
+    <% @topicos.each do |t| %>
+        <%= render t%>
+        <p> <%= link_to "show" , t%></p>
+    <% end %>
+</div>
+
+<%= link_to "novo topico", new_topico_path%>

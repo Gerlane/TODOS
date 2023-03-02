@@ -1,0 +1,5 @@
+<%= form_with(model :titulo) do |form| %>
+  <% if topico.errors.any? %>
+  <div style="color: red">
+  <ul>
+  <%topico.errors.each do |error|%>

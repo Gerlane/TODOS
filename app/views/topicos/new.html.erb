@@ -1,0 +1,22 @@
+<%= form_with(model: @topico) do |form| %>
+<% if @topico.erros.any? %>
+  <div style= color: red>
+  <ul>
+    <% @topico.erros.each do |error| %>
+    <li><% error.full_message %></li>
+<% end %>
+
+<div>
+    <% form.label :titulo, style: "display: block" %>
+    <% form.text_field :titulo%>
+</div>
+
+<div>
+    <% form.submit%>
+</div>
+
+<% end %>
+
+<div>
+    <%= link_to "topicos" , topicos_path %>
+</div>

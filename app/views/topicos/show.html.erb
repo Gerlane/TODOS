@@ -1,0 +1,10 @@
+<%= render @topico %>
+
+<div>
+    <%= link_to "Topicos", topicos_path%>
+    <%= link_to "Editar", edit_topico_path(@topico)%>
+    <%= button_to "Remover tópico", @topico, method: :delete %>
+</div>
+<% if !notice.present? %>
+  <p style="color: green"><%= notice %></p>
+<% end %>
